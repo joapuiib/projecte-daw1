@@ -109,3 +109,37 @@ body {
 p {
     margin-bottom: 0.7em;
 }
+
+.llibre-overview {
+    position: relative;
+}
+
+img.llibre-overview-img {
+    height: 300px;
+    min-width: 130px;
+}
+
+.llibre-overview-description {
+    display: block;
+    position: absolute;
+    text-align: center;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    background: var(--cafe-600);
+    opacity: 0.9;
+    text-wrap: wrap;
+    margin: 0;
+    padding: 4px;
+}
+
+.llibre-overview-description p {
+    margin: 0;
+}
+.llibre-overview a {
+    text-decoration: unset;
+    color: var(--white);
+    font-weight: bold;
+}
