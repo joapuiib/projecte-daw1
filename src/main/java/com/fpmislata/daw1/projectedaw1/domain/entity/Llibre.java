@@ -2,6 +2,7 @@ package com.fpmislata.daw1.projectedaw1.domain.entity;
 
 import com.fpmislata.daw1.projectedaw1.common.container.AutorIoc;
 import com.fpmislata.daw1.projectedaw1.common.container.GenereIoc;
+import com.fpmislata.daw1.projectedaw1.common.container.ReviewIoc;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,6 +23,7 @@ public class Llibre {
 
     private List<Autor> autors;
     private List<Genere> generes;
+    private List<Review> reviews;
 
     public Llibre() {
     }
@@ -60,6 +62,15 @@ public class Llibre {
 
     public void addGenere(Genere genere) {
         generes.add(genere);
+    }
+
+    public List<Review> getReviews() {
+        reviews = ReviewIoc.createService().findByLlibre(this);
+        return reviews;
+    }
+
+    public Review getReviewFromUser(User user){
+        return ReviewIoc.createService().findByLlibreAndUser(this, user);
     }
 
     @Override
