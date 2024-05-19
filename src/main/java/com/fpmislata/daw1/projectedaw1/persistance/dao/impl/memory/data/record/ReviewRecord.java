@@ -1,6 +1,5 @@
 package com.fpmislata.daw1.projectedaw1.persistance.dao.impl.memory.data.record;
 
-import com.fpmislata.daw1.projectedaw1.common.Utils;
 import lombok.Getter;
 import lombok.Setter;
 

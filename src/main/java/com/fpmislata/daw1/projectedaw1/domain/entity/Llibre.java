@@ -47,7 +47,8 @@ public class Llibre {
     }
 
     public List<Autor> getAutors() {
-        autors =  AutorIoc.createService().findByLlibre(this);
+        if (autors == null)
+            autors =  AutorIoc.createService().findByLlibre(this);
         return autors;
     }
 
@@ -56,7 +57,8 @@ public class Llibre {
     }
 
     public List<Genere> getGeneres() {
-        generes = GenereIoc.createService().findByLlibre(this);
+        if (generes == null)
+            generes = GenereIoc.createService().findByLlibre(this);
         return generes;
     }
 
@@ -65,7 +67,8 @@ public class Llibre {
     }
 
     public List<Review> getReviews() {
-        reviews = ReviewIoc.createService().findByLlibre(this);
+        if (reviews == null)
+            reviews = ReviewIoc.createService().findByLlibre(this);
         return reviews;
     }
 

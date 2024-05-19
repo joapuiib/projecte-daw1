@@ -17,16 +17,16 @@ public class ReviewServiceImpl implements ReviewService {
 
     @Override
     public Review findByLlibreAndUser(Llibre llibre, User user) {
-        return null;
+        return reviewRepository.findByLlibreIsbnAndUsername(llibre.getIsbn(), user.getUsername());
     }
 
     @Override
     public List<Review> findByLlibre(Llibre llibre) {
-        return null;
+        return reviewRepository.findByLlibreIsbn(llibre.getIsbn());
     }
 
     @Override
     public List<Review> findByUser(User user) {
-        return null;
+        return reviewRepository.findByUsername(user.getUsername());
     }
 }
